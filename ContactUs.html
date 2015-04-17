@@ -4,7 +4,7 @@
 		
 		<!-- CSS Stylesheet -->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		
+
 		<!-- jQuery library CDN -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -12,17 +12,19 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	</head>
+
 	<body>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Explore Classical</a>
+					<a class="navbar-brand" href="Home.html">Explore Classical</a>
 				</div>
 				<div>
 					<ul class="nav navbar-nav">
 						<li> <a href="Home.html"> Home </a> </li>
-						<li> <a href="Concerts.html"> Nearby Live Concerts </a> </li>
+						<li> <a href="Concerts.html">Live Concerts </a> </li>
 						<li> <a href="Discussions.html"> Discussions </a> </li>
 						<li> <a href="FAQ.html"> FAQ </a> </li>
 						<li> <a href="About.html"> About </a> </li>
@@ -32,16 +34,50 @@
 			</div>
 		</nav>
 		
-		<h1>Contact Form</h1>
-		Your Name (required)<br>
-		<input type="text"><br>
-		Your Email (required)<br>
-		<input type="text"><br>
-		Subject<br>
-		<input type="text"><br>
-		Your Message<br>
-		<input type="text" size="50"><br><br>
-		<button>Send</button>
+		<div class="jumbotron">
+			<h1 class="text-primary">Contact Explore Classical</h1>
+			<p class="text-primary">Explore Classical ~ Discover Beauty</p>
+		</div>
 		
+		<div class="container-fluid">
+			<h1 class="text-danger">[NOT IMPLEMENTED]</h1>
+			<div class="row">
+				<div class="col-sm-4"> 
+					<div class="container-fluid">
+						<div class="page-header text-center">
+							<h1> How to contact us! </h1>
+						</div>
+						<p>You can contact the staff of Explore Classical by filling in the following contact form. We will attempt to answer as soon as possible.</p>
+					</div>
+				</div>
+			
+				<div class="col-sm-8">
+					<div class="container-fluid">
+						<div class="page-header text-center">
+							<h1> The Contact Form</h1>
+						</div>
+						<p class="text-danger"> This section is yet to be implemented, but it could for example be presented as such:</p>
+						
+						<div class="form-group">
+						  <label for="usr">Name:</label>
+						  <input type="text" class="form-control" id="usr">
+						</div>
+						<div class="form-group">
+						  <label for="usrmail">Your Email:</label>
+						  <input type="text" class="form-control" id="usrmail">
+						</div>
+						<div class="form-group">
+						  <label for="subject">Subject:</label>
+						  <input type="text" class="form-control" id="subject">
+						</div>
+						<div class="form-group">
+							<label for="comment">Mail:</label>
+							<textarea class="form-control" rows="6" id="mail"></textarea>
+						</div>
+						<button type="button" class="btn btn-default">Send</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
