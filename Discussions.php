@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <html>
 	<head>
 		<title>Discussions | Explore Classical</title>
@@ -19,16 +23,19 @@
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="index.html">Explore Classical</a>
+					<a class="navbar-brand" href="index.php">Explore Classical</a>
 				</div>
 				<div>
 					<ul class="nav navbar-nav">
-						<li> <a href="index.html"> Home </a> </li>
-						<li> <a href="Concerts.html">Live Concerts </a> </li>
-						<li class="active"> <a href="Discussions.html"> Discussions </a> </li>
-						<li> <a href="FAQ.html"> FAQ </a> </li>
-						<li> <a href="About.html"> About </a> </li>
-						<li> <a href="ContactUs.html"> Contact Us </a> </li>
+						<li> <a href="index.php"> Home </a> </li>
+						<li> <a href="Concerts.php">Live Concerts </a> </li>
+						<li class="active"> <a href="Discussions.php"> Discussions </a> </li>
+						<li> <a href="FAQ.php"> FAQ </a> </li>
+						<li> <a href="About.php"> About </a> </li>
+						<li> <a href="ContactUs.php"> Contact Us </a> </li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li> <a href="LoginAndSignup/LoginHome.php">Login</a> </li>
 					</ul>
 				</div>
 			</div>
