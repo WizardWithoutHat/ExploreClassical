@@ -70,10 +70,11 @@
 					</div>
 					Sign up <br> <br>
 					<form method="post" action="SignUpCheck.php">
-					<!-- user_name & pass_word skal måske skiftes så man bruger forskellige variabler -->
-					Username: <input type="text" name="user_name">   <br> <br>
-					Password: <input type="password" name="pass_word"> <br> <br>
-					<input type="submit" value="Sign up"></form>
+						<!-- user_name & pass_word skal måske skiftes så man bruger forskellige variabler -->
+						Username: <input type="text" name="user_name">   <br> <br>
+						Password: <input type="password" name="pass_word"> <br> <br>
+						<input type="submit" value="Sign up">
+					</form>
 				</div>
 			</div>
 		</div>
