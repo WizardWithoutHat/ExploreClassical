@@ -4,8 +4,12 @@
 	</head>
 <body>
 <?php
-$conn = mysql_connect("localhost");
-mysql_select_db($conn);
+$servername = "localhost";
+$username = "exc";
+$password = "gxez2G:Pwfd5";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
 
 if($conn)
 {
