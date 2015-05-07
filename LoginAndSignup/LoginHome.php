@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <html>
 	<head>
 		<title>Login | Explore Classical</title>
