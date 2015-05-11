@@ -48,7 +48,7 @@ if (isset($registration)) {
 						<li> <a href="http://explore-classical.com/ContactUs.php"> Contact Us </a> </li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li > <a href="LoginAndSignup/LoginHome.php">Login</a> </li>
+						<li > <a href="http://explore-classical.com/LoginHome.php">Login</a> </li>
 					</ul>
 				</div>
 			</div>
