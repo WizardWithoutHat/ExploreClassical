@@ -46,9 +46,9 @@ class Login
     {
         // check login form contents
         if (empty($_POST['user_name'])) {
-            $this->errors[] = "Username field was empty.";
+			echo '<script>window.alert("Username field was empty.");</script>';
         } elseif (empty($_POST['user_password'])) {
-            $this->errors[] = "Password field was empty.";
+			echo '<script>window.alert("Password field was empty.");</script>';
         } elseif (!empty($_POST['user_name']) && !empty($_POST['user_password'])) {
 
             // create a database connection, using the constants from config/db.php (which we loaded in index.php)
@@ -88,13 +88,13 @@ class Login
                         $_SESSION['user_login_status'] = 1;
 
                     } else {
-                        $this->errors[] = "Wrong password. Try again.";
+						echo '<script>window.alert("Wrong password. Try again.");</script>';
                     }
                 } else {
-                    $this->errors[] = "This user does not exist.";
+					echo '<script>window.alert("This user does not exist.");</script>';
                 }
             } else {
-                $this->errors[] = "Database connection problem.";
+				echo '<script>window.alert("Database connection problem.");</script>';
             }
         }
     }
@@ -107,9 +107,8 @@ class Login
         // delete the session of the user
         $_SESSION = array();
         session_destroy();
-        // return a little feeedback message
-        $this->messages[] = "You have been logged out.";
-
+        // return a little feedback message
+        echo '<script>window.alert("You have been logged out.");</script>';
     }
 
     /**

@@ -37,23 +37,23 @@ class Registration
     private function registerNewUser()
     {
         if (empty($_POST['user_name'])) {
-            $this->errors[] = "Empty Username";
+				echo '<script>window.alert("Empty Username");</script>';
         } elseif (empty($_POST['user_password_new']) || empty($_POST['user_password_repeat'])) {
-            $this->errors[] = "Empty Password";
+				echo '<script>window.alert("Empty Password");</script>';
         } elseif ($_POST['user_password_new'] !== $_POST['user_password_repeat']) {
-            $this->errors[] = "Password and password repeat are not the same";
+				echo '<script>window.alert("Password and password repeat are not the same");</script>';
         } elseif (strlen($_POST['user_password_new']) < 6) {
-            $this->errors[] = "Password has a minimum length of 6 characters";
+				echo '<script>window.alert("Password has a minimum length of 6 characters");</script>';
         } elseif (strlen($_POST['user_name']) > 64 || strlen($_POST['user_name']) < 2) {
-            $this->errors[] = "Username cannot be shorter than 2 or longer than 64 characters";
+				echo '<script>window.alert("Username cannot be shorter than 2 or longer than 64 characters");</script>';
         } elseif (!preg_match('/^[a-z\d]{2,64}$/i', $_POST['user_name'])) {
-            $this->errors[] = "Username does not fit the name scheme: only a-Z and numbers are allowed, 2 to 64 characters";
+				echo '<script>window.alert("Username does not fit the name scheme: only a-Z and numbers are allowed, 2 to 64 characters");</script>';
         } elseif (empty($_POST['user_email'])) {
-            $this->errors[] = "Email cannot be empty";
+				echo '<script>window.alert("Email cannot be empty");</script>';
         } elseif (strlen($_POST['user_email']) > 64) {
-            $this->errors[] = "Email cannot be longer than 64 characters";
+				echo '<script>window.alert("Email cannot be longer than 64 characters");</script>';
         } elseif (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
-            $this->errors[] = "Your email address is not in a valid email format";
+				echo '<script>window.alert("Your email address is not in a valid email format");</script>';
         } elseif (!empty($_POST['user_name'])
             && strlen($_POST['user_name']) <= 64
             && strlen($_POST['user_name']) >= 2
@@ -92,7 +92,8 @@ class Registration
                 $query_check_user_name = $this->db_connection->query($sql);
 
                 if ($query_check_user_name->num_rows == 1) {
-                    $this->errors[] = "Sorry, that username / email address is already taken.";
+					echo '<script>window.alert("Sorry, that username / email address is already taken.");</script>';
+					echo '<script>window.location.replace("http://explore-classical.com)";</script>';
                 } else {
                     // write new user's data into database
                     $sql = "INSERT INTO users (user_name, user_password_hash, user_email)
@@ -101,16 +102,16 @@ class Registration
 
                     // if user has been added successfully
                     if ($query_new_user_insert) {
-                        echo "Your account has been created successfully. You can now log in.";
+                        echo '<script>window.alert("Your account has been created successfully. You can now log in.");</script>';
                     } else {
-                        $this->errors[] = "Sorry, your registration failed. Please go back and try again.";
+                        echo '<script>window.alert("Sorry, your registration failed. Please go back and try again.");</script>';
                     }
                 }
             } else {
-                $this->errors[] = "Sorry, no database connection.";
+				echo '<script>window.alert("Sorry, no database connection.");</script>';
             }
         } else {
-            $this->errors[] = "An unknown error occurred.";
+           	echo '<script>window.alert("An unknown error occurred.");</script>';
         }
     }
 }

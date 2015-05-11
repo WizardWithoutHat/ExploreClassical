@@ -31,4 +31,4 @@ require_once("classes/Registration.php");
 $registration = new Registration();
 
 // show the register view (with the registration form, and messages/errors)
-include("views/not_logged_in.php");
+include("views/register.php");

@@ -40,15 +40,15 @@ if (isset($registration)) {
 				</div>
 				<div>
 					<ul class="nav navbar-nav">
-						<li> <a href="index.php"> Home </a> </li>
-						<li> <a href="Concerts.php">Live Concerts </a> </li>
-						<li> <a href="Discussions.php"> Discussions </a> </li>
-						<li> <a href="FAQ.php"> FAQ </a> </li>
-						<li> <a href="About.php"> About </a> </li>
-						<li> <a href="ContactUs.php"> Contact Us </a> </li>
+						<li> <a href="http://explore-classical.com/index.php"> Home </a> </li>
+						<li> <a href="http://explore-classical.com/Concerts.php">Live Concerts </a> </li>
+						<li> <a href="http://explore-classical.com/Discussions.php"> Discussions </a> </li>
+						<li> <a href="http://explore-classical.com/FAQ.php"> FAQ </a> </li>
+						<li> <a href="http://explore-classical.com/About.php"> About </a> </li>
+						<li> <a href="http://explore-classical.com/ContactUs.php"> Contact Us </a> </li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"> <a href="LoginAndSignup/LoginHome.php">Login</a> </li>
+						<li > <a href="LoginAndSignup/LoginHome.php">Login</a> </li>
 					</ul>
 				</div>
 			</div>
@@ -60,56 +60,36 @@ if (isset($registration)) {
 		</div>
 		
 		<div class="jumbotron">
-			<h1 class="text-primary" style="padding-left:5%;">Login to Explore Classical</h1>
+			<h1 class="text-primary" style="padding-left:5%;">Welcome Aboard Explore Classical</h1>
 			<p class="text-primary" style="padding-left:10%;">Explore Classical ~ Discover Beauty</p>
 		</div>
 	
 		<div class="container-fluid">
+			<div class="page-header text-center">
+				<h1 class="text-primary">Account Succesfully Created!</h1>
+				<h3 class="text-primary">Enjoy Beauty!</h3>
+			</div>
+			
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<div class="page-header text-center">
-						<h1 class="text-primary">Login</h1>
+						<h1 class="text-important">Your Profile</h1>
 					</div>
-					login <br> <br>
-				    <!-- backlink -->
-					<a href="LoginHome.php">Back to Login Page!</a>
-					
-					<!-- login form box
-					<form method="post" action="index.php" name="loginform">
-
-					    <label for="login_input_username">Username</label>
-					    <input id="login_input_username" class="login_input" type="text" name="user_name" required />
-
-					    <label for="login_input_password">Password</label>
-					    <input id="login_input_password" class="login_input" type="password" name="user_password" autocomplete="off" required />
-
-					    <input type="submit"  name="login" value="Log in" />
-
-					</form>
-					-->
+					<p>Your profile has been created, and should be reachable after logging in back on the <a href="http://explore-classical.com/LoginHome.php">Login Page</a>. There you will in the future be able to find information such as playlists and forum posts of your own.</p>
 				</div>
 			
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<div class="page-header text-center">
-						<h1 class="text-primary">Sign Up</h1>
+						<h1 class="text-important">Playlists</h1>
 					</div>
-					
-					<form method="post" action="register.php" name="registerform">
-						<!-- the user name input field uses a HTML5 pattern check -->
-					    <label for="login_input_username">Username (only letters and numbers, 2 to 64 characters)</label>
-					    <input id="login_input_username" class="login_input" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" required />
-						
-					    <!-- the email input field uses a HTML5 email type check -->
-					    <label for="login_input_email">User's email</label>
-					    <input id="login_input_email" class="login_input" type="email" name="user_email" required />
-
-					    <label for="login_input_password_new">Password (min. 6 characters)</label>
-					    <input id="login_input_password_new" class="login_input" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
-					
-					    <label for="login_input_password_repeat">Repeat password</label>
-					    <input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
-					    <input type="submit"  name="register" value="Register" />
-					</form>
+					<p>Playlists are a list of tracks that you find to be related in some way, be it that they are from a certain timeperiod, share a mood or if you just find them to be great in general and want to have them sorted. This should all be explained to you on your profile.</p>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="page-header text-center">
+						<h1 class="text-important">Discussions</h1>
+					</div>
+					<p>Like creating playlists, you can now start posting on the <a href="http://explore-classical.com/Discussions.php">Discussion Boards</a> using your account. Here, you will be able to chat and interact with the classical community to share what you've discovered!</p>
 				</div>
 			</div>
 		</div>

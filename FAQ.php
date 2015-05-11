@@ -1,5 +1,13 @@
 <?php
+// include the configs / constants for the database connection
+require_once("LoginAndSignup/config/db.php");
 
+// load the login class
+require_once("LoginAndSignup/classes/Login.php");
+
+// create a login object. when this object is created, it will do all login/logout stuff automatically
+// so this single line handles the entire login process. in consequence, you can simply ...
+$login = new Login();
 ?>
 
 <html>
@@ -35,7 +43,18 @@
 						<li> <a href="ContactUs.php"> Contact Us </a> </li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li> <a href="LoginAndSignup/LoginHome.php">Login</a> </li>
+						<?php $login = new Login();
+						//asks if we are logged in here:
+						if ($login->isUserLoggedIn() == true) {
+							// the user is logged in. you can do whatever you want here.
+							// for demonstration purposes, we simply show the "you are logged in" view.
+							echo '<li> <a href="LoginHome.php">Profile</a> </li>';
+							echo '<li> <a href="LoginHome.php?logout">Logout</a> </li>';
+						} else {
+							// the user is not logged in. you can do whatever you want here.
+							// for demonstration purposes, we simply show the "you are not logged in" view.
+							echo '<li> <a href="LoginHome.php">Login</a> </li>';
+						} ?>
 					</ul>
 				</div>
 			</div>
