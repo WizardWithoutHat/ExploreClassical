@@ -78,9 +78,11 @@ $login = new Login();
 				<li>
 					<div class="panel panel-default">
 						<div class="panel-heading">What is Explore Classical?</div>
-						<div class="panel-body">Explore Classical was born out of the idea that Classical Music should be a genre to be accepted in mainstream media once again.
-						It is in many places seen as the educated mans genre, and thereby excludeing typically the younger generations, which is a cultural loss.
-						This is described more on the <a href="About.html">about</a> page.</div>
+						<div class="panel-body">
+						Explore Classical is a cultural educational project which strives to bring the wonders of classical music to everyone. 
+						Explore Classical strives to become the main source of discovering new classical music, both digitally and live.
+						Whether you are a newcomer to classical music or have many years of experience, we will help you find exactly the music that suits your mood, age and much more. 
+						See more on the <a href="About.php">about</a> page.</div>
 					</div>
 				</li>
 				<li>

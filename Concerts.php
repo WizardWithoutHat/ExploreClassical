@@ -78,12 +78,12 @@ $login = new Login();
 						<div class="page-header text-center">
 							<h1 class="text-important">To find a concert</h1>
 						</div>
-						<p>Classical music is not only about hearing the music made in the past, it is also about the present. 
-						Many masterful orchestras practice Classical music around the globe, and to experience them brings a new level to the experience.
+						<p>It is long said that classical music is best experienced live.
+						Many great orchestras, soloists and chamber groups perform classical music all around the globe, and to hear the great classical masterworks being created in the moment, brings a completely new dimension to the experience. 
 						Here you will eventually (when implemented) be able to find a list of Live Concerts being played soon near you! </p>
 
-						<p>The way this is supposed to work is to use HTML Geolocation in javascript to calculate which concerts are closest within a certain timeframe, say, a week.
-						It could maybe ask for the location of the computer as of right now (the easier solution), or maybe choose from Google Maps.</p>
+						<p>The way this is supposed to work is to use HTML Geolocation in javascript to calculate which concerts are closest within a certain timeframe, e.g. a week.
+						It could maybe ask for the location of the computer as of right now (the easier solution), or maybe choose from Google Maps. </p>
 						
 						<p>All of the nearby concerts should then be shown in a table on the right column.</p>
 					</div>

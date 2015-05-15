@@ -79,19 +79,19 @@ $login = new Login();
 						</div>
 						
 						<blockquote>
-							<p>The Explore Classical project aims to make digital and live classical music readily available for people of all ages with an interest for classical music, but who doens't have the knowledge or experience to explore and navigate the massive catalogue composed over the years.</p>
-							<p>The product will in its final state involve a digital database of live classical concerts, a streaming service specialised for classical music, aimed to achieve a tailor-made experience while also categoriseing the vast and sometimes incomprehensible catalogue of classical music.</p>
+							<p>The Explore Classical project aims to make digital and live classical music easily accessible for people of all ages with an interest for classical music, but who does not have the knowledge or experience to navigate the massive catalogue of hundreds of years of compositions and thousands of recordings.</p>
+							<p>The product will in its final state involve a digital database of live classical concerts, a streaming service specialized for classical music, aimed to create a tailor-made experience while also categorizing the vast and sometimes incomprehensible catalogue of classical music. </p>
 							<p>From interactions with the user, a complex system would ideally be able to predict the exact piece of music which would fit the users mood, personality, experience with classical music and much more. </p>
-							<p>This is but one of the many possibilities for unique experiences that can be achieved through the exploration of the classical genre.</p>
+							<p>This is but one of the many possibilities for unique experiences that can be achieved through the exploration of the classical genre. </p>
 			
-							<p>We want to create a useful tool for experienced music fans and newcomers alike of all ages, and thereby reduce the otherwise strong misrepresentation that classical musik belongs to the times of old, and specifically for the exclusivity of the elite.</p>
-							<p>We want to take advantage of our time's increasing interest for classical music, ammount of concertgoers and of young people attending classical concerts, and thereby bring everyone an oppurtunity to experience this enriching and educational part of our cultural heritage.</p>
-							<p>The classical music is deeply engrained in the western cultures, and is a universal, broadly appealing and constantly current form of art, which we believe should be accessible by all.</p>
-							<p>The project is primarily a cultural educational and enlightenment project with the aim of raiseing awareness about the timeliness and usefullness inherent to the classical genre.</p>
-							<p>The project however does not wish to prove classical music to be above any other musical genre, but neither does it attempt to abase it, and thereby give it less credit than it is due.</p>
-							<p>With Explore Classical we attempt to break down the traditional niche inherent in classical music, help people of all ages and social status to discover the world of classical music, and improve and secure an audience for this musical heritage.</p>
-							<p>We will use our times increasing interest for the genre, and utilise the many advantages of social media and streaming services to bring the massive genre into the 21. century - both to the aid of the present classical music industry, but most of all to promote spiritual and cultural education for everyone.</p>
-							<footer><p>Erik Danciu, Project Manager</p>
+							<p>We wish to create a useful tool for experienced listeners and newcomers alike, and thereby reduce the otherwise strong misrepresentation of classical music as something exclusive or old-fashioned. </p>
+							<p>We want to take advantage of our time's increasing interest for classical music, the increase in the amount of concertgoers and of young people attending classical concerts, and give even more people an opportunity to experience this strongly enriching and important part of our cultural heritage. </p>
+							<p>Classical music is deeply engrained in the western culture, and is a universal, broadly appealing and constantly actual art form, which we believe should be accessible by all. </p>
+							<p>The project is primarily a cultural educational and enlightenment project with the aim of raising awareness about the timeliness and value of the classical genre. </p>
+							<p>The project does not wish to prove classical music to be above any other musical genre, but neither does it attempt to abase it, and making it less than it is. </p>
+							<p>With Explore Classical we want to break down the old niche about classical music, help people of all ages and social statuses to discover the world of classical music, and at the same time secure and and prepare future audiences for classical concerts. </p>
+							<p>We will use the increasing interest for classical music, and utilize the many advantages of social media and streaming services to bring classical music into the 21. century - both for the gain of the classical music industry, but most of all to promote spiritual and cultural growth amongst all human beings. </p>
+							<footer><p class="text-primary">Erik Danciu, Project Manager</p>
 							<p>Studying for a Master's degree in violin at the Royal Danish Academy of Music</p>
 						</blockquote>
 					</div>
@@ -103,7 +103,7 @@ $login = new Login();
 					</div>
 					<blockquote>
 						<p class="lead">Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.<p>
-						<footer><p>Plato, Greek Philosopher</p></footer>
+						<footer><p class="text-primary">Plato, Greek Philosopher</p></footer>
 					</blockquote>
 					<center>
 						<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A0aAHipKwUxMlVLHL5TOPqo" width="300" height="380" align="center" frameborder="0" allowtransparency="true"></iframe>

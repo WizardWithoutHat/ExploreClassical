@@ -78,14 +78,17 @@ $login = new Login();
 						<div class="page-header text-center">
 							<h1 class="text-important">To discuss the music</h1>
 						</div>
-						<p>To really understand music one might want to discuss it with people. This page is supposed to be a gateway to a forum where the topic is classical music.
-						This could range from discussions about a certain symphony, composer, orchestra, genre or timeperiod. The possibilities for discourse are endless, and as such it has to be facilitated.
-						Here, the users of the site can freely make discussions and so on knowing that everyone shares their common interest in music.</p>
+						<p>To really understand music one might want to discuss it with others. 
+						This page is supposed to be a gateway to a forum where the topic is classical music.
+						This could range from discussions about a certain symphony, composer, orchestra, genre or timeperiod.
+						The possibilities for discourse are endless, and as such it has to be facilitated. 
+						Here, the users of the site can freely have discussions, knowing that everyone shares their common interest in music. </p>
 
 						<p>The way this is supposed to work is to either outsource the work to an already established forum-service, or to attempt to make one ourselves.
-						To do so would require a login-system, a database for the posts to be stored, a system for moderation and so on.</p>
+						To do so would require a login-system, a database for the posts to be stored, a system for moderation and so on. </p>
 						
-						<p>One attempt to visualise such a post on a forum could be seen to the right, in the other column. Ofcourse this is a very rough idea, with no functionality as of yet.</p>
+						<p>One attempt to visualize such a post on a forum could be seen to the right, in the other column. 
+						Of course this is a very rough idea, with no functionality as of yet. </p>
 					</div>
 				</div>
 			

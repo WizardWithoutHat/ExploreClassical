@@ -91,14 +91,14 @@ $login = new Login();
 							<h1 class="text-important">Go Exploring!</h1>
 						</div>
 						
-						<p> This website offers you access to the world of one of the greatest genres of music in the history of man, Classical Music. 
-						Classical music has been around for centuries, and has usually been seen as the educated mans music, which has led to it being less prevalent in the modern scene.
-						This website aims to correct this by bringing you the wonders of the classical genre, to prove that this has more to offer to the modern society than you'd think. </p>
+						<p> This website offers you simple and personalized access to the world of classical music. 
+						The huge classical repertoire includes some of the greatest human artistic achievements, and we believe in the importance of making this easily accessible for everyone - no matter age or previous experience with classical music. 
+						Apart from managing and categorizing digital classical music, we will help you find live classical concerts near you - all for free.  </p>
 					
-						<p> To the right you can have a taste of what we will show you. 
-						This website utilises Spotify, so in order to use it properly you should have it installed on your computer from <a href="https://www.spotify.com">their website</a>.
-						Spotify is a free service, and if you have Facebook, you can simply use that to log in and listen.
-						This website aims to help you browse through the vast catalogue, thereby bringing you both well known and lesser known gems that you might not have experienced otherwise.
+						<p> To the right you will find a few examples of what music you can discover. 
+						This website utilizes <i>Spotify</i>, so in order to use it properly you should have it installed on your computer from <a href="https://www.spotify.com">their website</a>. 
+						<i>Spotify</i> is a free service, and if you have Facebook, you can simply use that to log in and listen.
+						This website aims to help you browse through the vast catalogue of classical music, thereby bringing you both the well known and lesser known gems that you might not have experienced otherwise. 
 						</p>
 					</div>
 				</div>
