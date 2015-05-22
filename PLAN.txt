@@ -1,8 +1,0 @@
-Vi skal have:
--En decideret hjemmeside med OK design. Dette involverer:
-	-Home page, About page, Live koncerter nær en, musik.
-
-Bruger system er ikke essentielt, i det at det eneste vi kan bruge det til er at brugere kan gemme deres musik.
-Dertil kan det også bruges på et forum, som vi heller ikke ser som essentielt lige PT.
-
-Database prioriteres snart, i det at vi har brug for at have noget at arbejde med til de resterende emner.
