@@ -53,16 +53,16 @@ if (isset($registration)) {
 				</div>
 				<div>
 					<ul class="nav navbar-nav">
-						<li> <a href="http://explore-classical.com/"> Home </a> </li>
-						<li> <a href="http://explore-classical.com/Search.php"> Music</a> </li>
-						<li> <a href="http://explore-classical.com/Concerts.php">Live Concerts </a> </li>
-						<li> <a href="http://explore-classical.com/Discussions.php"> Discussions </a> </li>
-						<li> <a href="http://explore-classical.com/FAQ.php"> FAQ </a> </li>
-						<li> <a href="http://explore-classical.com/About.php"> About </a> </li>
-						<li> <a href="http://explore-classical.com/ContactUs.php"> Contact Us </a> </li>
+						<li> <a href="index.php"> Home </a> </li>
+						<li> <a href="Search.php"> Music</a> </li>
+						<li> <a href="Concerts.php">Live Concerts </a> </li>
+						<li> <a href="Discussions.php"> Discussions </a> </li>
+						<li> <a href="FAQ.php"> FAQ </a> </li>
+						<li> <a href="About.php"> About </a> </li>
+						<li> <a href="ContactUs.php"> Contact Us </a> </li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"> <a href="http://explore-classical.com/LoginHome.php">Login</a> </li>
+						<li class="active"> <a href="LoginHome.php">Login</a> </li>
 					</ul>
 				</div>
 			</div>

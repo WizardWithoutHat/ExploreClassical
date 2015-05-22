@@ -53,7 +53,7 @@
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="http://explore-classical.com/index.php">Explore Classical</a>
+					<a class="navbar-brand" href="index.php">Explore Classical</a>
 				</div>
 				<div>
 					<ul class="nav navbar-nav">

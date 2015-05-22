@@ -27,7 +27,7 @@ $login = new Login();
 
 <html>
 	<head>
-		<title>Home | Explore Classical</title>
+		<title>Exploration | Explore Classical</title>
 		
 		<!-- CSS Stylesheet -->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -47,12 +47,12 @@ $login = new Login();
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="http://explore-classical.com/index.php">Explore Classical</a>
+					<a class="navbar-brand" href="index.php">Explore Classical</a>
 				</div>
 				<div>
 					<ul class="nav navbar-nav">
 						<li> <a href="index.php"> Home </a> </li>
-						<li class="active"> <a href="search.php"> Music </a> </li>
+						<li class="active"> <a href="Search.php"> Music </a> </li>
 						<li> <a href="Concerts.php"> Live Concerts </a> </li>
 						<li> <a href="Discussions.php"> Discussions </a> </li>
 						<li> <a href="FAQ.php"> FAQ </a> </li>
@@ -65,12 +65,12 @@ $login = new Login();
 						if ($login->isUserLoggedIn() == true) {
 							// the user is logged in. you can do whatever you want here.
 							// for demonstration purposes, we simply show the "you are logged in" view.
-							echo '<li> <a href="http://explore-classical.com/LoginHome.php">Profile</a> </li>';
-							echo '<li> <a href="http://explore-classical.com/LoginHome.php?logout">Logout</a> </li>';
+							echo '<li> <a href="LoginHome.php">Profile</a> </li>';
+							echo '<li> <a href="LoginHome.php?logout">Logout</a> </li>';
 						} else {
 							// the user is not logged in. you can do whatever you want here.
 							// for demonstration purposes, we simply show the "you are not logged in" view.
-							echo '<li> <a href="http://explore-classical.com/LoginHome.php">Login</a> </li>';
+							echo '<li> <a href="LoginHome.php">Login</a> </li>';
 						} ?>
 					</ul>
 				</div>

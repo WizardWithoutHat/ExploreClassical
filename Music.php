@@ -24,12 +24,19 @@ require_once("LoginAndSignup/classes/Login.php");
 $login = new Login();
 
 $TrackID = $_GET["ID"];
+$recordset = mysqli_query($conn, "SELECT * FROM Music WHERE TrackID = " . $TrackID);
+$result = $recordset->fetch_assoc();
+$TrackName = $result["Track_Name"];
+$ArtistName = $result["Artist_Name"];
+$Description = $result["Description"];
+$spotifyURL = $result["spotifyURL"];
+$recordset->free();
 ?>
 
 
 <html>
 	<head>
-		<title>Home | Explore Classical</title>
+		<title> <?php echo $TrackName; ?> | Explore Classical</title>
 		
 		<!-- CSS Stylesheet -->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -49,17 +56,17 @@ $TrackID = $_GET["ID"];
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="http://explore-classical.com/index.php">Explore Classical</a>
+					<a class="navbar-brand" href="index.php">Explore Classical</a>
 				</div>
 				<div>
 					<ul class="nav navbar-nav">
-						<li> <a href="http://explore-classical.com/index.php"> Home </a> </li>
+						<li> <a href="index.php"> Home </a> </li>
 						<li class="active"> <a href="Search.php"> Music</a> </li>
-						<li> <a href="http://explore-classical.com/Concerts.php"> Live Concerts </a> </li>
-						<li> <a href="http://explore-classical.com/Discussions.php"> Discussions </a> </li>
-						<li> <a href="http://explore-classical.com/FAQ.php"> FAQ </a> </li>
-						<li> <a href="http://explore-classical.com/About.php"> About </a> </li>
-						<li> <a href="http://explore-classical.com/ContactUs.php"> Contact Us </a> </li>
+						<li> <a href="Concerts.php"> Live Concerts </a> </li>
+						<li> <a href="Discussions.php"> Discussions </a> </li>
+						<li> <a href="FAQ.php"> FAQ </a> </li>
+						<li> <a href="About.php"> About </a> </li>
+						<li> <a href="ContactUs.php"> Contact Us </a> </li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<?php $login = new Login();
@@ -67,12 +74,12 @@ $TrackID = $_GET["ID"];
 						if ($login->isUserLoggedIn() == true) {
 							// the user is logged in. you can do whatever you want here.
 							// for demonstration purposes, we simply show the "you are logged in" view.
-							echo '<li> <a href="http://explore-classical.com/LoginHome.php">Profile</a> </li>';
-							echo '<li> <a href="http://explore-classical.com/LoginHome.php?logout">Logout</a> </li>';
+							echo '<li> <a href="LoginHome.php">Profile</a> </li>';
+							echo '<li> <a href="LoginHome.php?logout">Logout</a> </li>';
 						} else {
 							// the user is not logged in. you can do whatever you want here.
 							// for demonstration purposes, we simply show the "you are not logged in" view.
-							echo '<li> <a href="http://explore-classical.com/LoginHome.php">Login</a> </li>';
+							echo '<li> <a href="LoginHome.php">Login</a> </li>';
 						} ?>
 					</ul>
 				</div>
@@ -87,9 +94,7 @@ $TrackID = $_GET["ID"];
 		<div class="jumbotron">
 			<h1 class="text-primary" style="padding-left:5%;"> 
 				<?php 
-					$recordset = mysqli_query($conn, "SELECT Artist_Name FROM Music WHERE TrackID = " . $TrackID);
-					$result = $recordset->fetch_assoc();
-					echo $result["Artist_Name"];
+					echo $ArtistName
 				?> 
 			</h1>
 			<p class="text-primary" style="padding-left:10%;">Explore Classical ~ Discover Beauty</p>
@@ -102,26 +107,20 @@ $TrackID = $_GET["ID"];
 						<h1 class="text-important">Description</h1>
 					</div>
 					<?php
-							$recordset = mysqli_query($conn, "SELECT Description FROM Music WHERE TrackID = " . $TrackID);
-							$result = $recordset->fetch_assoc();
-							echo $result["Description"];
+							echo $Description;
 						?>
 				</div>
 			
 				<div class="col-sm-8">
 					<div class="page-header text-center">
 						<h1 class="text-important"><?php
-								$recordset = mysqli_query($conn, "SELECT Track_Name FROM Music WHERE TrackID = ". $TrackID);
-								$result = $recordset->fetch_assoc();
-								echo $result["Track_Name"];
+								echo $TrackName;
 						?></h1>
 					</div>
 					<center>
 						<iframe id="randomMusic" src="
 							<?php
-								$recordset = mysqli_query($conn, "SELECT spotifyURL FROM Music WHERE TrackID = "  . $TrackID);	
-								$result = $recordset->fetch_assoc();
-								echo $result["spotifyURL"];
+								echo $spotifyURL;
 							?>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 					</center>
 				</div>
