@@ -1,4 +1,18 @@
-<?php
+<?php>
+	$servername = "localhost";
+	$username = "exc";
+	$password = "gxez2G:Pwfd5";
+	$dbname = "exc_main";
+
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+	// Check connection
+	if (!$conn) 
+	{
+		die("Connection failed: " . mysqli_connect_error());
+	}
+	
 // include the configs / constants for the database connection
 require_once("LoginAndSignup/config/db.php");
 
@@ -10,9 +24,10 @@ require_once("LoginAndSignup/classes/Login.php");
 $login = new Login();
 ?>
 
+
 <html>
 	<head>
-		<title>Contact Us | Explore Classical</title>
+		<title>Home | Explore Classical</title>
 		
 		<!-- CSS Stylesheet -->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -22,26 +37,27 @@ $login = new Login();
 
 		<!-- Latest compiled JavaScript CDN -->
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	</head>
-
+	
 	<body>
+	
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="index.php">Explore Classical</a>
+					<a class="navbar-brand" href="http://explore-classical.com/index.php">Explore Classical</a>
 				</div>
 				<div>
 					<ul class="nav navbar-nav">
 						<li> <a href="index.php"> Home </a> </li>
-						<li> <a href="Search.php"> Music</a> </li>
-						<li> <a href="Concerts.php">Live Concerts </a> </li>
+						<li class="active"> <a href="search.php"> Music </a> </li>
+						<li> <a href="Concerts.php"> Live Concerts </a> </li>
 						<li> <a href="Discussions.php"> Discussions </a> </li>
 						<li> <a href="FAQ.php"> FAQ </a> </li>
 						<li> <a href="About.php"> About </a> </li>
-						<li class="active"> <a href="ContactUs.php"> Contact Us </a> </li>
+						<li> <a href="ContactUs.php"> Contact Us </a> </li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<?php $login = new Login();
@@ -49,67 +65,44 @@ $login = new Login();
 						if ($login->isUserLoggedIn() == true) {
 							// the user is logged in. you can do whatever you want here.
 							// for demonstration purposes, we simply show the "you are logged in" view.
-							echo '<li> <a href="LoginHome.php">Profile</a> </li>';
-							echo '<li> <a href="LoginHome.php?logout">Logout</a> </li>';
+							echo '<li> <a href="http://explore-classical.com/LoginHome.php">Profile</a> </li>';
+							echo '<li> <a href="http://explore-classical.com/LoginHome.php?logout">Logout</a> </li>';
 						} else {
 							// the user is not logged in. you can do whatever you want here.
 							// for demonstration purposes, we simply show the "you are not logged in" view.
-							echo '<li> <a href="LoginHome.php">Login</a> </li>';
+							echo '<li> <a href="http://explore-classical.com/LoginHome.php">Login</a> </li>';
 						} ?>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		
+
 		<div class="jumbotron">
 			<h1 class="text-danger text-center">WEBSITE UNDER CONSTRUCTION</h1>
 			<p class="text-danger text-center">Below is purely conceptual information</p>
 		</div>
 		
 		<div class="jumbotron">
-			<h1 class="text-primary" style="padding-left:5%;">Contact Explore Classical</h1>
+			<h1 class="text-primary" style="padding-left:5%;">Exploration in Music</h1>
 			<p class="text-primary" style="padding-left:10%;">Explore Classical ~ Discover Beauty</p>
 		</div>
 		
-		<div class="container-fluid">
-			<h1 class="text-danger">[NOT IMPLEMENTED]</h1>
-			<div class="row">
-				<div class="col-sm-4"> 
-					<div class="container-fluid">
-						<div class="page-header text-center">
-							<h1> How to contact us! </h1>
-						</div>
-						<p>You can contact the staff of Explore Classical by filling in the following contact form. We will attempt to answer as soon as possible.</p>
-					</div>
+		<div class="container-fluid">		
+			<form role="form" action="searchlist.php" method="get" name="searchform">
+				<div class="form-group">
+					<label for="search_track_name">Track Name: </label>
+					<input id="search_track_name" class="form-control" type="text" placeholder="Part of a track's name" name="Track_Name"><br>	
 				</div>
-			
-				<div class="col-sm-8">
-					<div class="container-fluid">
-						<div class="page-header text-center">
-							<h1> The Contact Form</h1>
-						</div>
-						<p class="text-danger"> This section is yet to be implemented, but it could for example be presented as such:</p>
-						
-						<div class="form-group">
-						  <label for="usr">Name:</label>
-						  <input type="text" class="form-control" id="usr">
-						</div>
-						<div class="form-group">
-						  <label for="usrmail">Your Email:</label>
-						  <input type="text" class="form-control" id="usrmail">
-						</div>
-						<div class="form-group">
-						  <label for="subject">Subject:</label>
-						  <input type="text" class="form-control" id="subject">
-						</div>
-						<div class="form-group">
-							<label for="comment">Mail:</label>
-							<textarea class="form-control" rows="6" id="mail"></textarea>
-						</div>
-						<button type="button" class="btn btn-default">Send</button>
-					</div>
+				<div class="form-group">
+					<label for="search_artist_name">Artist Name: </label>
+					<input id="search_artist_name" class="form-control" type="text" placeholder="An artists name" name="Artist_Name"><br>
 				</div>
-			</div>
+				<div class="form-group">
+					<label for="search_year">Year: </label>
+					<input id="search_year" class="form-control" type="text" placeholder="A year" name="Year"><br>
+				</div>
+				<button type="submit"  class="btn btn-default" name="searchsubmit" value="Search">Search</button>
+			</form>
 		</div>
 	</body>
 </html>

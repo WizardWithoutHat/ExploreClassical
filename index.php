@@ -49,6 +49,7 @@ $login = new Login();
 				<div>
 					<ul class="nav navbar-nav">
 						<li class="active"> <a href="index.php"> Home </a> </li>
+						<li> <a href="Search.php"> Music</a> </li>
 						<li> <a href="Concerts.php"> Live Concerts </a> </li>
 						<li> <a href="Discussions.php"> Discussions </a> </li>
 						<li> <a href="FAQ.php"> FAQ </a> </li>

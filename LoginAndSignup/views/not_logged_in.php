@@ -54,6 +54,7 @@ if (isset($registration)) {
 				<div>
 					<ul class="nav navbar-nav">
 						<li> <a href="http://explore-classical.com/"> Home </a> </li>
+						<li> <a href="http://explore-classical.com/Search.php"> Music</a> </li>
 						<li> <a href="http://explore-classical.com/Concerts.php">Live Concerts </a> </li>
 						<li> <a href="http://explore-classical.com/Discussions.php"> Discussions </a> </li>
 						<li> <a href="http://explore-classical.com/FAQ.php"> FAQ </a> </li>
@@ -83,41 +84,50 @@ if (isset($registration)) {
 					<div class="page-header text-center">
 						<h1 class="text-primary">Login</h1>
 					</div>
-					login <br> <br>
-					<!-- login form box -->
-					<form method="post" action="LoginHome.php" name="loginform">
-
-					    <label for="login_input_username">Username</label>
-					    <input id="login_input_username" class="login_input" type="text" name="user_name" required />
-
-					    <label for="login_input_password">Password</label>
-					    <input id="login_input_password" class="login_input" type="password" name="user_password" autocomplete="off" required />
-
-					    <input type="submit"  name="login" value="Log in" />
-
-					</form>
+					<div class="container-fluid">
+						<!-- login form box -->
+						<form role="form" method="post" action="LoginHome.php" name="loginform">
+							<div class="form-group">
+								<label for="login_input_username">Username</label>
+								<input id="login_input_username" class="login_input form-control" type="text" placeholder="Enter Username" name="user_name" required />
+							</div>
+							
+							<div class="form-group">
+								<label for="login_input_password">Password</label>
+								<input id="login_input_password" class="login_input form-control" type="password" placeholder="Enter Password"  name="user_password" autocomplete="off" required />
+							</div>
+							<button type="submit" class="btn btn-default"  name="login" value="Log in"> Submit </button>
+						</form>
+					</div>
 				</div>
 			
 				<div class="col-sm-6">
 					<div class="page-header text-center">
 						<h1 class="text-primary">Sign Up</h1>
 					</div>
-					<!-- Registration form box -->
-					<form method="post" action="register.php" name="registerform">
-						<!-- the user name input field uses a HTML5 pattern check -->
-					    <label for="login_input_username">Username (only letters and numbers, 2 to 64 characters)</label>
-					    <input id="login_input_username" class="login_input" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" required />
-						
-					    <!-- the email input field uses a HTML5 email type check -->
-					    <label for="login_input_email">User's email</label>
-					    <input id="login_input_email" class="login_input" type="email" name="user_email" required />
-
-					    <label for="login_input_password_new">Password (min. 6 characters)</label>
-					    <input id="login_input_password_new" class="login_input" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
 					
-					    <label for="login_input_password_repeat">Repeat password</label>
-					    <input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
-					    <input type="submit"  name="register" value="Register" />
+					<div class="container-fluid">
+						<!-- Registration form box -->
+						<form role="form" method="post" action="register.php" name="registerform">
+							<div class="form-group">
+								<!-- the user name input field uses a HTML5 pattern check -->
+								<label for="login_input_username">Username (only letters and numbers, 2 to 64 characters)</label>
+								<input id="login_input_username" class="login_input form-control" type="text" pattern="[a-zA-Z0-9]{2,64}" placeholder="Enter desired Username" name="user_name" required />
+							</div>
+							<div class="form-group">
+								<!-- the email input field uses a HTML5 email type check -->
+								<label for="login_input_email">User's email</label>
+								<input id="login_input_email" class="login_input form-control" type="email" placeholder="Enter valid Email"name="user_email" required />
+							</div>
+							<div class="form-group">
+								<label for="login_input_password_new">Password (min. 6 characters)</label>
+								<input id="login_input_password_new" class="login_input form-control" type="password" placeholder="Enter secure password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
+							</div>
+							<div class="form-group">
+								<label for="login_input_password_repeat">Repeat password</label>
+								<input id="login_input_password_repeat" class="login_input form-control" type="password" placeholder="Repeat secure password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
+							</div>
+					    <button type="submit"  class="btn btn-default" name="register" value="Register">Register</button>
 					</form>
 				</div>
 			</div>

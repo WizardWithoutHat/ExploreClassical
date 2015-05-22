@@ -13,15 +13,21 @@
 		die("Connection failed: " . mysqli_connect_error());
 	}
 	
-// include the configs / constants for the database connection
-require_once("../LoginAndSignup/config/db.php");
+	// include the configs / constants for the database connection
+	require_once("LoginAndSignup/config/db.php");
 
-// load the login class
-require_once("../LoginAndSignup/classes/Login.php");
+	// load the login class
+	require_once("LoginAndSignup/classes/Login.php");
 
-// create a login object. when this object is created, it will do all login/logout stuff automatically
-// so this single line handles the entire login process. in consequence, you can simply ...
-$login = new Login();
+	// create a login object. when this object is created, it will do all login/logout stuff automatically
+	// so this single line handles the entire login process. in consequence, you can simply ...
+	$login = new Login();
+
+	$TrackName = "%" . $_GET["Track_Name"] . "%";
+	$ArtistName = "%" . $_GET["Artist_Name"] . "%";
+	$Year = $_GET["Year"];
+
+	$recordset = mysqli_query($conn, "SELECT * FROM Music WHERE (Track_Name LIKE '". $TrackName ."') OR (Artist_Name LIKE '". $ArtistName ."') OR (Year = " . $Year . ")");
 ?>
 
 
@@ -51,13 +57,13 @@ $login = new Login();
 				</div>
 				<div>
 					<ul class="nav navbar-nav">
-						<li> <a href="http://explore-classical.com/index.php"> Home </a> </li>
-						<li class="active"> <a href="Search.php"> Music</a> </li>
-						<li> <a href="http://explore-classical.com/Concerts.php"> Live Concerts </a> </li>
-						<li> <a href="http://explore-classical.com/Discussions.php"> Discussions </a> </li>
-						<li> <a href="http://explore-classical.com/FAQ.php"> FAQ </a> </li>
-						<li> <a href="http://explore-classical.com/About.php"> About </a> </li>
-						<li> <a href="http://explore-classical.com/ContactUs.php"> Contact Us </a> </li>
+						<li> <a href="index.php"> Home </a> </li>
+						<li class="active"> <a href="Search.php"> Music </a> </li>
+						<li> <a href="Concerts.php"> Live Concerts </a> </li>
+						<li> <a href="Discussions.php"> Discussions </a> </li>
+						<li> <a href="FAQ.php"> FAQ </a> </li>
+						<li> <a href="About.php"> About </a> </li>
+						<li> <a href="ContactUs.php"> Contact Us </a> </li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<?php $login = new Login();
@@ -83,46 +89,29 @@ $login = new Login();
 		</div>
 		
 		<div class="jumbotron">
-			<h1 class="text-primary" style="padding-left:5%;"> 
-				<?php 
-					$recordset = mysqli_query($conn, "SELECT Artist_Name FROM Music WHERE TrackID = 2");
-					$result = $recordset->fetch_assoc();
-					echo $result["Artist_Name"];
-				?> 
-			</h1>
+			<h1 class="text-primary" style="padding-left:5%;">Exploration in Music</h1>
 			<p class="text-primary" style="padding-left:10%;">Explore Classical ~ Discover Beauty</p>
 		</div>
 		
 		<div class="container-fluid">		
-			<div class="row">
-				<div class="col-sm-4"> 
-					<div class="page-header text-center">
-						<h1 class="text-important">Description</h1>
-					</div>
-					<?php
-							$recordset = mysqli_query($conn, "SELECT Description FROM Music WHERE TrackID = 2");
-							$result = $recordset->fetch_assoc();
-							echo $result["Description"];
-						?>
-				</div>
-			
-				<div class="col-sm-8">
-					<div class="page-header text-center">
-						<h1 class="text-important"><?php
-								$recordset = mysqli_query($conn, "SELECT Track_Name FROM Music WHERE TrackID = 2");
-								$result = $recordset->fetch_assoc();
-								echo $result["Track_Name"];
-						?></h1>
-					</div>
-					<center>
-						<iframe id="randomMusic" src="
-							<?php
-								$recordset = mysqli_query($conn, "SELECT spotifyURL FROM Music WHERE TrackID = 2");	
-								$result = $recordset->fetch_assoc();
-								echo $result["spotifyURL"];
-							?>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-					</center>
-				</div>
+			 <div class="list-group">
+				<?php
+					$counter = 0;
+					if($recordset->num_rows > 0){
+						while( $result = $recordset->fetch_assoc()){
+							if($counter % 2 == 0){
+								echo '<a href="#" class="list-group-item active">';
+								$counter = $counter + 1;
+							} else {
+								echo '<a href="#" class="list-group-item">';
+								$counter = $counter + 1;
+							}
+							echo '<h4 class="list-group-item-heading">' . $result[Track_Name] . ' </h4>';
+							echo '<p class="list-group-item-text">' . $result[Artist_Name] . ', ' . $result[Year] . '</p>';
+							echo '</a>';
+						}
+					}
+				?>
 			</div>
 		</div>
 	</body>
