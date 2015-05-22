@@ -14,14 +14,16 @@
 	}
 	
 // include the configs / constants for the database connection
-require_once("../LoginAndSignup/config/db.php");
+require_once("LoginAndSignup/config/db.php");
 
 // load the login class
-require_once("../LoginAndSignup/classes/Login.php");
+require_once("LoginAndSignup/classes/Login.php");
 
 // create a login object. when this object is created, it will do all login/logout stuff automatically
 // so this single line handles the entire login process. in consequence, you can simply ...
 $login = new Login();
+
+$TrackID = $_GET["ID"];
 ?>
 
 
@@ -85,7 +87,7 @@ $login = new Login();
 		<div class="jumbotron">
 			<h1 class="text-primary" style="padding-left:5%;"> 
 				<?php 
-					$recordset = mysqli_query($conn, "SELECT Artist_Name FROM Music WHERE TrackID = 2");
+					$recordset = mysqli_query($conn, "SELECT Artist_Name FROM Music WHERE TrackID = " . $TrackID);
 					$result = $recordset->fetch_assoc();
 					echo $result["Artist_Name"];
 				?> 
@@ -100,7 +102,7 @@ $login = new Login();
 						<h1 class="text-important">Description</h1>
 					</div>
 					<?php
-							$recordset = mysqli_query($conn, "SELECT Description FROM Music WHERE TrackID = 2");
+							$recordset = mysqli_query($conn, "SELECT Description FROM Music WHERE TrackID = " . $TrackID);
 							$result = $recordset->fetch_assoc();
 							echo $result["Description"];
 						?>
@@ -109,7 +111,7 @@ $login = new Login();
 				<div class="col-sm-8">
 					<div class="page-header text-center">
 						<h1 class="text-important"><?php
-								$recordset = mysqli_query($conn, "SELECT Track_Name FROM Music WHERE TrackID = 2");
+								$recordset = mysqli_query($conn, "SELECT Track_Name FROM Music WHERE TrackID = ". $TrackID);
 								$result = $recordset->fetch_assoc();
 								echo $result["Track_Name"];
 						?></h1>
@@ -117,7 +119,7 @@ $login = new Login();
 					<center>
 						<iframe id="randomMusic" src="
 							<?php
-								$recordset = mysqli_query($conn, "SELECT spotifyURL FROM Music WHERE TrackID = 2");	
+								$recordset = mysqli_query($conn, "SELECT spotifyURL FROM Music WHERE TrackID = "  . $TrackID);	
 								$result = $recordset->fetch_assoc();
 								echo $result["spotifyURL"];
 							?>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>

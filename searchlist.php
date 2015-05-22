@@ -100,10 +100,10 @@
 					if($recordset->num_rows > 0){
 						while( $result = $recordset->fetch_assoc()){
 							if($counter % 2 == 0){
-								echo '<a href="#" class="list-group-item active">';
+								echo '<a href="Music.php?ID='.$result[TrackID].'" class="list-group-item active">';
 								$counter = $counter + 1;
 							} else {
-								echo '<a href="#" class="list-group-item">';
+								echo '<a href="Music.php?ID='.$result[TrackID].'" class="list-group-item">';
 								$counter = $counter + 1;
 							}
 							echo '<h4 class="list-group-item-heading">' . $result[Track_Name] . ' </h4>';
