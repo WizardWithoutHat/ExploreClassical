@@ -27,6 +27,10 @@
 	$ArtistName = "%" . $_GET["Artist_Name"] . "%";
 	$Year = $_GET["Year"];
 
+	if(strlen($Year) == 0){
+		$Year = 0000;
+	}
+	
 	$recordset = mysqli_query($conn, "SELECT * FROM Music WHERE (Track_Name LIKE '". $TrackName ."') OR (Artist_Name LIKE '". $ArtistName ."') OR (Year = " . $Year . ")");
 ?>
 
