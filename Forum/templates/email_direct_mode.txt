@@ -1,0 +1,5 @@
+SUBJECT>>Email from {$sitename}: Direct contact<<
+
+{$question}
+
+From: {$user_usr}
