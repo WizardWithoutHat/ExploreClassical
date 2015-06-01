@@ -6,6 +6,7 @@
 
 	// Create connection
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
+	mysqli_set_charset($conn, 'utf8');
 
 	// Check connection
 	if (!$conn) 
@@ -27,7 +28,15 @@
 	$ArtistName = "%" . $_GET["Artist_Name"] . "%";
 	$Year = $_GET["Year"];
 
-	if(strlen($Year) == 0){
+	if(strlen($TrackName) == 2){
+		$TrackName = "UNDEFINED UNDEFINED UNDEFINED";
+	}
+	
+		if(strlen($ArtistName) == 2){
+		$ArtistName = "UNDEFINED UNDEFINED UNDEFINED";
+	}
+	
+		if(strlen($Year) == 0){
 		$Year = 0000;
 	}
 	
