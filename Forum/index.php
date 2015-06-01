@@ -1,3 +1,19 @@
+	<head>
+		<title>Home | Explore Classical</title>
+		
+		<!-- CSS Stylesheet -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- jQuery library CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript CDN -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	</head>
+
 <?php
 /*
 This file is part of miniBB. miniBB is free discussion forums/message board software, without any warranty.
@@ -5,6 +21,7 @@ See COPYING file for more details.
 Copyright (C) 2015 Paul Puzyrev. www.minibb.com
 Latest File Update: 2015-Apr-08
 */
+
 $unset=array('logged_admin', 'isMod', 'user_id', 'langu', 'includeHeader', 'includeFooter', 'emptySubscribe', 'allForumsReg', 'registerInactiveUsers', 'mod_rewrite', 'enableViews', 'userDeleteMsgs', 'userInfoInPosts', 'inss', 'insres', 'preModerationType', 'textLd', 'adminAcceptsSignup', 'customProfileList', 'correct', 'customTopicSort', 'manualIndex', 'startIndex', 'mTop', 'mdrw', 'metaLocation', 'post', 'reply_to_email', 'csrfchk', 'emailCharset', 'adminUser', 'cook', 'forumClone', 'xtr', 'addMainTitle', 'url_follow', 'site_url', 'allowedRefs', 'uname_minlength', 'uname_maxlength', 'enchecked', 'fIconWidth', 'fIconHeight', 'smartLinking', 'pathToTpl', 'archives', 'forumsTt', 'forums_url', 'mysql_set_names', 'eeol', 'startNewTopicLink', 'lastPostIcon', 'disableNavDisplay', 'custom_mobile_actions', 'disableSuperSticky','superStickyModule', 'check_pmquota', 'failedSending', 'rheader', 'allowHyperlinksProfile', 'l_mobilePreviousPage', 'l_mobileNextPage', 'statsDefField', 'emailname');
 for($i=0;$i<sizeof($unset);$i++) if(isset(${$unset[$i]})) { ${$unset[$i]}=''; unset(${$unset[$i]}); }
 if(isset($metaLocation)) $metaLocation=str_replace(array('.','/','\\','admin_'),'',$metaLocation);
