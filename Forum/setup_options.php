@@ -26,7 +26,7 @@ $admin_email='mariusbsamson@gmail.com';
 
 $bb_admin='bb_admin8080.php?';
 
-$indexphp='index.php?';
+$indexphp='latterlighed.php?';
 
 $cookiedomain='';
 $cookiename='forums22483';
