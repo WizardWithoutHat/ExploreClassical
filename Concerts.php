@@ -1,4 +1,20 @@
-<?php
+<?php>
+
+	$servername = "localhost";
+	$username = "exc";
+	$password = "gxez2G:Pwfd5";
+	$dbname = "exc_main";
+
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
+	mysqli_set_charset($conn, 'utf8');
+
+	// Check connection
+	if (!$conn) 
+	{
+		die("Connection failed: " . mysqli_connect_error());
+	}
+	
 // include the configs / constants for the database connection
 require_once("LoginAndSignup/config/db.php");
 
@@ -8,6 +24,8 @@ require_once("LoginAndSignup/classes/Login.php");
 // create a login object. when this object is created, it will do all login/logout stuff automatically
 // so this single line handles the entire login process. in consequence, you can simply ...
 $login = new Login();
+
+$recordset = mysqli_query($conn, "SELECT * FROM Liveconcerts");
 ?>
 
 <html>
@@ -103,9 +121,72 @@ $login = new Login();
 									<th>Author</th>
 									<th>Date</th>
 									<th>Location</th>
+									<th>Distance</th>
 								</tr>
 							</thead>
 							<tbody>
+								<?php 
+									$counter = 0;
+									if($recordset->num_rows > 0){
+										while( $result = $recordset->fetch_assoc()){
+											if($counter % 3 == 0){
+												echo '<tr class="success">';
+												$counter = $counter + 1;
+											} 
+											if($counter % 3 == 1){
+												echo '<tr class="primary">';
+												$counter = $counter + 1;
+											} else {
+												echo '<tr class="danger">';
+												$counter = $counter + 1;
+											}
+											echo '<td>'.$result["Titel"].'</td>';
+											echo '<td>'.$result["Orchester"].'</td>';
+											echo '<td>'.$result["Date"].', kl. '.$result["Time"].'</td>';
+											echo '<td>'.$result["City"].'</td>';
+											echo '<td> <p id="distance"></p> </td>';
+											echo '</tr>';
+											
+											echo '<script>
+											//"demo" refererede i deres originale kode til en tom paragraph som de kunne printe resultatetet til.
+											var x = document.getElementById("distance");
+
+											//getLocation bruger HTML5s navigator til at finde geolocationen af brugeren. Dette gives i en "position" objekt
+											function getLocation() {
+ 											   if (navigator.geolocation) {
+											        navigator.geolocation.getCurrentPosition(showDistance);
+											    } else {
+ 											       x.innerHTML = "Geolocation is not supported by this browser.";
+ 											   }
+											}
+
+											//positions objektet består af Latitude og longitude, som her printes til den paragraph nævnt tidligere.
+											function showDistance(position) {
+												var lat1 = <?php echo $result["Latitude"]; ?>;
+												var lon1 = <?php echo $result["Longitude"]; ?>;
+												var lat2 = position.coords.latitude;
+												var lon2 = position.coords.longitude;
+												
+												var R = 6371000; // metres
+												var φ1 = lat1.toRadians();
+												var φ2 = lat2.toRadians();
+												var Δφ = (lat2-lat1).toRadians();
+												var Δλ = (lon2-lon1).toRadians();
+	
+												var a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+														Math.cos(φ1) * Math.cos(φ2) *
+														Math.sin(Δλ/2) * Math.sin(Δλ/2);
+												var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+	
+												var d = R * c;
+											
+											    x.innerHTML = d; 
+											}
+											</script>';
+										}
+									}
+								?>
+								<!--
 								<tr class="success">
 									<td>Hymne til Kærligheden</td>
 									<td>Aarhus Symfoniorkester</td>
@@ -124,6 +205,7 @@ $login = new Login();
 									<td>30. maj - 2014</td>
 									<td>DR Koncerthuset</td>
 								</tr>
+								-->
 							</tbody>
 						</table>						
 					</div>

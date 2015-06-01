@@ -84,7 +84,7 @@ if (isset($registration)) {
 					<div class="page-header text-center">
 						<h1 class="text-primary">Login</h1>
 					</div>
-					<div class="container-fluid">
+					<div class="container-fluid" style="padding-left:15%; padding-right:15%;">
 						<!-- login form box -->
 						<form role="form" method="post" action="LoginHome.php" name="loginform">
 							<div class="form-group">
@@ -96,7 +96,7 @@ if (isset($registration)) {
 								<label for="login_input_password">Password</label>
 								<input id="login_input_password" class="login_input form-control" type="password" placeholder="Enter Password"  name="user_password" autocomplete="off" required />
 							</div>
-							<button type="submit" class="btn btn-default"  name="login" value="Log in"> Submit </button>
+							<center><button type="submit" class="btn btn-primary"  name="login" value="Log in"> Submit </button></center>
 						</form>
 					</div>
 				</div>
@@ -106,7 +106,7 @@ if (isset($registration)) {
 						<h1 class="text-primary">Sign Up</h1>
 					</div>
 					
-					<div class="container-fluid">
+					<div class="container-fluid" style="padding-left:15%; padding-right:15%;">
 						<!-- Registration form box -->
 						<form role="form" method="post" action="register.php" name="registerform">
 							<div class="form-group">
@@ -127,7 +127,7 @@ if (isset($registration)) {
 								<label for="login_input_password_repeat">Repeat password</label>
 								<input id="login_input_password_repeat" class="login_input form-control" type="password" placeholder="Repeat secure password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
 							</div>
-					    <button type="submit"  class="btn btn-default" name="register" value="Register">Register</button>
+					    <center><button type="submit"  class="btn btn-primary" name="register" value="Register">Register</button></center>
 					</form>
 				</div>
 			</div>
