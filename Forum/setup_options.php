@@ -9,9 +9,9 @@ Latest File Update: 2014-Sep-28
 $DB='mysqli';
 
 $DBhost='localhost';
-$DBname='database.name';
-$DBusr='database.username';
-$DBpwd='database.password';
+$DBname='exc_Forum';
+$DBusr='exc';
+$DBpwd='gxez2G:Pwfd5';
 
 $Tf='minibbtable66_forums';
 $Tp='minibbtable66_posts';
@@ -21,10 +21,10 @@ $Ts='minibbtable66_send_mails';
 $Tb='minibbtable66_banned';
 
 $admin_usr='Admin';
-$admin_pwd='specify.admin.password';
-$admin_email='specify.root.admin.email.address';
+$admin_pwd='teamhold';
+$admin_email='mariusbsamson@gmail.com';
 
-$bb_admin='bb_admin2903.php?';
+$bb_admin='bb_admin8080.php?';
 
 $indexphp='index.php?';
 
@@ -36,7 +36,7 @@ $cookie_expires=108000;
 $cookie_renew=1800;
 $cookielang_exp=2592000;
 
-$main_url='http://www.minibb.com/forums';
+$main_url='http://www.explore-classical.com/Forum';
 
 $lang='eng';
 $skin='default';

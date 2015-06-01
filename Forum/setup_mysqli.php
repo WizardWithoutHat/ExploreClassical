@@ -5,10 +5,6 @@ Check COPYING file for more details.
 Copyright (C) 2014 Paul Puzyrev. www.minibb.com
 Latest File Update: 2014-Sep-24
 */
-$DBhost = "localhost";
-$DBusr = "exc";
-$DBpwd = "gxez2G:Pwfd5";
-$DBname = "exc_Forum";
 
 $mysqlink = mysqli_connect($DBhost, $DBusr, $DBpwd) or die ('<b>Database/configuration error.</b>');
 mysqli_select_db($mysqlink, $DBname) or die ('<b>Database/configuration error (DB is missing).</b>');
