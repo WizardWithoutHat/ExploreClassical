@@ -56,7 +56,7 @@ $recordset = mysqli_query($conn, "SELECT * FROM Liveconcerts");
 						<li> <a href="index.php"> Home </a> </li>
 						<li> <a href="Search.php"> Music</a> </li>
 						<li class="active"> <a href="Concerts.php">Live Concerts </a> </li>
-						<li> <a href="Discussions.php"> Discussions </a> </li>
+						<li> <a href="http://www.explore-classical.com/Forum/index.php"> Discussions </a> </li>
 						<li> <a href="FAQ.php"> FAQ </a> </li>
 						<li> <a href="About.php"> About </a> </li>
 						<li> <a href="ContactUs.php"> Contact Us </a> </li>
