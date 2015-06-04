@@ -46,7 +46,7 @@
 
 <html>
 	<head>
-		<title>Home | Explore Classical</title>
+		<title>Discoveries | Explore Classical</title>
 		
 		<!-- CSS Stylesheet -->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
